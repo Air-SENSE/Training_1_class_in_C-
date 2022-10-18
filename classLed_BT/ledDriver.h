@@ -8,6 +8,11 @@ class ledDriver {
 private:
     int ledPin;
 public:
+    /*
+    * @brief drive the LEDs
+    * @param pin connect to LED 
+    * @return 
+    */
     ledDriver(int ledSetPin);
     void init();
     void turnOn();
