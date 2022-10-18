@@ -1,14 +1,14 @@
 #pragma once
-#ifndef ledDriver_h
-#define ledDriver_h
+#ifndef _LEDDRIVER_H_
+#define _LEDDRIVER_H_
 
 #include "Arduino.h" 
 
 class ledDriver {
 private:
-    int ledPin;
+    uint8_t PIN_LED;
 public:
-    ledDriver(int ledSetPin);
+    ledDriver(uint8_t led_setPin);
     void init();
     void turnOn();
     void turnOff();
