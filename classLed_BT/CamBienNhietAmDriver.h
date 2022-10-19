@@ -42,9 +42,9 @@ void KhoiTaoNhietAm_KhoiTao()
 }
 int DocNhietDo_Doc()
 {
-  return (int)camBienNhietAm.readTemperature();
+  return (int)CamBienNhietAm.readTemperature();
 }
 int DocDoAm_Doc()
 {
-  return (int)camBienNhietAm.readHumidity();
+  return (int)CamBienNhietAm.readHumidity();
 }
