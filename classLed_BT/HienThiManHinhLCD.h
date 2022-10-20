@@ -57,7 +57,7 @@ void LCD_DieuKhien()
  * @brief Hien thi menu1: nhiet do, do am
  * 
  */
-void ManHinhLCD_Menu1()
+void LCD_Menu1()
 {
 /*
                   ---------------------------------
@@ -76,7 +76,7 @@ void ManHinhLCD_Menu1()
  * @brief Hien thi menu2: trang thai den cac mau r, g, b
  * 
  */
-void ManHinhLCD_Menu2()
+void LCD_Menu2()
 {
 /*
                   ---------------------------------
