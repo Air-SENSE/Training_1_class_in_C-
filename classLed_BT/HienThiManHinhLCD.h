@@ -4,48 +4,60 @@
  * 
  */
 
-void CaiDatManHinh();
-void KhoiTaoHienThi();
-void DieuKhienLCD();
-void HienThiMenu1();
-void HienThiMenu2();
+void LCD_CaiDat();
+void LCD_KhoiTao();
+void LCD_DieuKhien();
+void LCD_Menu1();
+void LCD_Menu2();
 
-
-void CaiDatLCD()
+/**
+ * @brief Cai dat man hinh LCD
+ * 
+ */
+void LCD_CaiDat()
 {
   lcd.begin();
   lcd.backlight();
   lcd.display();
 }
-
-void KhoiTaoHienThi()
+/**
+ * @brief Khoi tao man hinh, in ra dong 1: SPARC LAB 2, dong 2: hardware team
+ * 
+ */
+void LCD_KhoiTao()
 {
   lcd.setCursor(0, 0);
   lcd.print("SPARC LAB 2");
   lcd.setCursor(0, 1);
   lcd.print("hardware team");
 }
-
-void DieuKhienLCD()
+/**
+ * @brief dieu khien man hinh dua vao TRANG_THAI DEN
+ * 
+ */
+void LCD_DieuKhien()
 {
   switch(trangThai)
   {
     case KHOI_DONG_GIA_TRI:
-            KhoiTaoHienThi();
+            ManHinhLCD_KhoiTao();
         break;
         
     case BAT_TAT_CA_DEN:
-            HienThiMenu1();
+            ManHinhLCD_Menu1();
         break;
         
     case BAT_LAN_LUOT:
-            HienThiMenu2();
+            ManHinhLCD_Menu2();
         break;
         
   }
 }
-
-void HienThiMenu1()
+/**
+ * @brief Hien thi menu1: nhiet do, do am
+ * 
+ */
+void LCD_Menu1()
 {
 /*
                   ---------------------------------
@@ -60,7 +72,11 @@ void HienThiMenu1()
   lcd.print("do am    : ");
   lcd.print(docDoAm());
 }
-void HienThiMenu2()
+/**
+ * @brief Hien thi menu2: trang thai den cac mau r, g, b
+ * 
+ */
+void LCD_Menu2()
 {
 /*
                   ---------------------------------
